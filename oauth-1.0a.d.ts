@@ -114,7 +114,7 @@ declare namespace OAuth {
    * Note: the key is used for implementation HMAC algorithms for the body hash,
    * but typically it should return SHA1 hash of base_string.
    */
-  export type BodyHashFunction = (base_string, key) => string;
+  export type BodyHashFunction = (base_string: string, key: string) => string;
 
   /**
    * OAuth key/secret pair.
@@ -140,7 +140,7 @@ declare namespace OAuth {
   /**
    * Method used to hash the the OAuth and form/querystring data.
    */
-  export type HashFunction = (base_string, key) => string;
+  export type HashFunction = (base_string: string, key: string) => string;
 
   /**
    * Authorization header.
@@ -159,7 +159,7 @@ declare namespace OAuth {
     last_ampersand?: boolean;
     nonce_length?: number;
     parameter_seperator?: string;
-    realm: string;
+    realm?: string;
     signature_method?: string;
     version?: string;
   }
